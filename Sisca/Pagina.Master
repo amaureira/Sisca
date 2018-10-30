@@ -8,7 +8,7 @@
     <title>Colegio San Agustin Concepción</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link href="../Imagenes/Logo_CSAC.jpg" rel="icon" type="image/x-icon"/>
+    <link href="Imagenes/Logo_CSAC.jpg" rel="icon" type="image/x-icon"/>
     <style type="text/css">
 
     body {
@@ -54,6 +54,8 @@
         margin-right: auto;
         margin-top: 0px;
         margin-bottom: 0px;*/
+        width:25%;
+        height:auto;
         float:left;
         margin: 1px 10px 10px 10px;
         }
@@ -185,6 +187,15 @@
         background:#ffffff;
     }
 
+        .auto-style1 {
+            width: 100px;
+            height: 55px;
+            margin-top: 1px;
+        }
+        .auto-style2 {
+            width: 19%;
+        }
+
     </style>
 
     <meta http-equiv="Expires" content="0" />
@@ -202,8 +213,8 @@
         <form id="form2" runat="server" style="margin-left: 40px; margin-top: 0px; height:auto">
         <header>
             <div id="titulo" class="fijo">
-                <div id="titulo2" >
-                    <img src="../Imagenes/Logo_CSAC.jpg" runat="server" width="200" alt="" style="height: 43px; margin-top: 0px"/>
+                <div id="titulo2" class="auto-style2" >
+                    <img src="/Imagenes/Logo_CSAC.jpg" runat="server" class="auto-style1"/>
                 </div>
             </div>
             <div id="cerrarSesion" class="fijo">

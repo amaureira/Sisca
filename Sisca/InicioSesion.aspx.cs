@@ -91,7 +91,7 @@ namespace Sisca
                     else
                     {
                         Session.Add("ssusuario", TxtUsuario.Text);
-                        Response.Redirect("/MInterfaz/Menu_Principal.aspx");
+                        Response.Redirect("~/MInterfaz/Menu_Principal.aspx");
                     }
                 }
             }

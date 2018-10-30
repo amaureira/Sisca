@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
 using MySql.Data.MySqlClient;
 using MySql.Data;
 using System.Data;
@@ -39,7 +38,6 @@ namespace Sisca.Clases
                 //preguntar por la cantidad de filas
                 if (contador > 0)
                     retorno = 1;
-
             }
             catch (Exception e)
             {
@@ -47,8 +45,6 @@ namespace Sisca.Clases
             }
             return retorno;
         }
-
-
 
         //metodo para mostrar persona en el formulario principal
         public DataTable mostrar_DatoUsuario(String user)
@@ -67,8 +63,7 @@ namespace Sisca.Clases
                 //MessageBox.Show(error.ToString());
             }
             return tabla;
-
-
         }
+
     }
 }
