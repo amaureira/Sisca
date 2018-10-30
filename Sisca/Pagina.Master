@@ -1,0 +1,229 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Pagina.master.cs" Inherits="Sisca.Pagina" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Colegio San Agustin Concepción</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Imagenes/Logo_CSAC.jpg" rel="icon" type="image/x-icon"/>
+    <style type="text/css">
+
+    body {
+        background: #ffffff;
+        margin: 20px;
+        font-family: 'Open Sans', sans-serif;
+        color: rgba(113,113,113,1.00);
+    }
+
+    #contenedor{
+        margin:0 auto;
+        max-height:inherit;
+        background:#ffffff;
+        }
+
+    /*----- CABECERA ----------*/
+    .fijo {
+        position:fixed
+        !important;
+        top:2px;
+        z-index:50
+        !important;
+    }
+
+    #titulo {
+        background-color: #F0F8F8;
+        border-bottom: 3px solid #FFF;
+        margin: 0;
+        width: 100%;
+        float: none;
+        border-radius: 0px;
+        padding: 5px;
+        text-align: center;
+        left: -2px;
+        height: 52px;
+    }
+
+    #titulo2 {
+        /*width:374px;
+        padding:0px;
+        margin-left: 0px;
+        left: 3px;
+        margin-right: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;*/
+        float:left;
+        margin: 1px 10px 10px 10px;
+        }
+
+    #titulo3 {
+        margin-left: 25px;
+        left: 562px;
+        width: 125px;
+        height: 55px;
+    }
+
+    #cerrarSesion{
+        width:118px;
+        float:right;
+        margin:0px auto 0px 0px;
+        padding:5px;
+        right:16px;
+        height: 19px;
+    }
+
+    .icon_cerrar{
+        background: url(cerrar.png) left no-repeat;
+        padding-left:17px;
+        color:rgba(143,27,29,1.00);
+        text-decoration:none;
+        font-size: 14px;
+    }
+
+    .icon_cerrar:hover{
+        text-decoration:underline; color:rgba(29,94,92,1.00);
+        background: url(cerrar_on.png) left no-repeat;
+    }
+
+    #PeriodoMes{
+        height:8px;
+        width:73px;
+        float:right;
+        margin-top: 69px;
+        margin:0px 0px 0px 0px;
+        padding:30px;
+        right:94px;
+        height: 19px;
+        }
+
+    /*----- MENÚ PRINCIPAL ----------*/
+
+    #menuBotones {
+        background: #FFF;
+        height: 31px;
+        width: 100%;
+        margin-top: 65px;
+        left: 0px;
+        vertical-align:central;
+    }
+
+    #menuBotones ul{
+        list-style:none;
+        /*width:100%;
+        height:19px;*/
+        margin-left:0px;
+        display:inline-flex;
+        background-color:rgba(69, 171, 163, 0.6);
+        padding-top:22px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 3px;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #menuBotones li{
+    margin-left: 2px;
+    float: left;
+    margin-top: -22px;
+    /*background-color: #D0ECEE;*/
+    background: rgba(208,236,238,1);
+    }
+
+    #menuBotones li a{
+    line-height: 25px;
+    display: block;
+    padding: 0 25px;
+    color: #2E6564;
+    font-size: 15px;
+    /*color: rgba(77,76,76,1.00);*/
+    text-decoration: none;
+    }
+
+    #menuBotones li a:hover{
+    background: #5CC5C0;
+    color: rgba(249,249,249,1.00);
+    }
+
+    #menuBotones li a:active{
+    text-decoration: none;
+    color: green;
+    background-color: #ff9c62;
+    }
+
+    #menuBotones li ul li a {
+     width: 540px;
+     margin: 0;
+     padding:0;
+    }
+
+    #menuBotoness li ul li a:hover {
+     width: 240px;
+     margin: 0;
+     color: #9c0101;
+     background:none;
+    }
+
+    /*----- CUERPO ----------*/
+    #cuerpo {
+        background:#ffffff;
+        margin-left: -2px;
+    }
+
+    #piepagina {
+        width: 100%;
+        height: 81px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    #principal{
+        background:#ffffff;
+    }
+
+    </style>
+
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+
+    <script type="text/javascript">
+        if (history.forward(1))
+            location.replace(history.forward(1))
+    </script>
+
+</head>
+<body>
+    <div>
+        <!-------- CABECERA ----->
+        <form id="form2" runat="server" style="margin-left: 40px; margin-top: 0px; height:auto">
+        <header>
+            <div id="titulo" class="fijo">
+                <div id="titulo2" >
+                    <img src="../Imagenes/Logo_CSAC.jpg" runat="server" width="200" alt="" style="height: 43px; margin-top: 0px"/>
+                </div>
+            </div>
+            <div id="cerrarSesion" class="fijo">
+                <a href="/InicioSesion.aspx" class="icon_cerrar">Cerrar Sesión</a>
+            </div>
+        </header>
+            <div id="menuBotones" class="fijo" runat="server">
+                <ul>
+                    <li><asp:LinkButton ID="LinkBtnPerfil" runat="server" OnClick="LinkBtnPerfil_Click" Enabled="False">Mi Perfil</asp:LinkButton></li>
+                    <li><asp:LinkButton ID="LinkBtnAlmuerzos" runat="server" OnClick="LinkBtnAlmuerzos_Click" Enabled="False">Almuerzos</asp:LinkButton></li>
+                    <li><asp:LinkButton ID="LinkBtnRegistro" runat="server" OnClick="LinkBtnRegistro_Click" Enabled="False">Registros</asp:LinkButton></li>
+                    <li><asp:LinkButton ID="LinkBtnCFG" runat="server" OnClick="LinkBtnCFG_Click" Enabled="True">Configuración</asp:LinkButton></li>
+                </ul>
+            </div>
+            <div id="cuerpo" runat="server">
+                <div id="principal" style=" margin-top: 80px; width: 854px; margin-left: -32px; height: 0px;" >
+                    <asp:ContentPlaceHolder ID="PrincipalPag" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

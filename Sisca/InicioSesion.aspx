@@ -11,6 +11,19 @@
 
     <style type="text/css">
 
+        #login {
+            height: 350px;
+            width: 520px;
+            /*position: absolute;*/
+                /*top: 50%;*/
+                /*left: 50%;*/
+ 
+            /*margin-top: -175px;    height/2 = 500px / 2 */
+            /*margin-left: -260px;   width/2 = 500px / 2 */
+            margin: 0 auto;
+            align-self:center;
+        }
+
     #Panel1 {
         background:#f8f8f8;
         border-left:1px solid #e2e0e0;
@@ -39,10 +52,6 @@
         margin-left: 0px;
         }
 
-        .auto-style1 {
-            width: 97px;
-        }
-
         .auto-style2 {
             width: 97px;
             height: 28px;
@@ -50,6 +59,8 @@
 
         .auto-style3 {
             height: 28px;
+            text-align :left;
+            
         }
 
         .auto-style4 {
@@ -77,6 +88,13 @@
         text-align: center;
     }
 
+        .auto-style5 {
+            width: 97px;
+            height: 28px;
+            font-size: 14pt;
+            text-align:left;
+        }
+
     </style>
 
     <meta http-equiv="Expires" content="0" />
@@ -98,32 +116,28 @@
 </head>
 
 <body>
-    <p>
-    </p>
     <form id="form1" runat="server">
     <div id="login">
-        
-        <asp:Panel ID="Panel1" runat="server" HorizontalAlign="Center" Height="348px" Width="513px" style="margin-top: 80px; margin-left: 440px;" DefaultButton="BtnIngresar">
-            <br />
+        <asp:Panel ID="Panel1" runat="server" HorizontalAlign="Center" DefaultButton="BtnIngresar">
+            
             <img src="../Imagenes/Logo_CSAC.jpg" class="auto-style4" />
             <br />
-            <br />
-            <br />
+            
             <table id="TbLogin">
                 <tr>
-                    <td class="auto-style2"><asp:Label ID="LbUsuario" runat="server" Text="Usuario" Font-Size="14pt"></asp:Label></td>
+                    <td class="auto-style5">Rut</td>
                     <td class="auto-style3"><asp:Label ID="Lb5" runat="server" Text=":" Font-Size="14pt"></asp:Label></td>
-                    <td class="auto-style3"><asp:TextBox ID="TxtUsuario" runat="server" ToolTip="Usuario" Font-Size="12pt" Width="170px" CssClass="txt" TabIndex="1" CausesValidation="True" AutoPostBack="True" OnTextChanged="TxtUsuario_TextChanged"></asp:TextBox></td>
+                    <td class="auto-style3"><asp:TextBox ID="TxtUsuario" runat="server" ToolTip="Usuario" Font-Size="12pt" Width="170px" CssClass="txt" TabIndex="1" CausesValidation="True" AutoPostBack="True" OnTextChanged="TxtUsuario_TextChanged" > </asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td class="auto-style2"><asp:Label ID="LbContraseña" runat="server" Text="Contraseña" Font-Size="14pt"></asp:Label></td>
+                    <td class="auto-style5"><asp:Label ID="LbContraseña" runat="server" Text="Contraseña" Font-Size="14pt"></asp:Label></td>
                     <td class="auto-style3"><asp:Label ID="Lb6" runat="server" Text=":" Font-Size="14pt"></asp:Label></td>
                     <td class="auto-style3"><asp:TextBox ID="TxtPass" runat="server" TextMode="Password" ToolTip="Contraseña" Font-Size="12pt" Width="170px" CssClass="txt" TabIndex="3" Enabled="False"></asp:TextBox></td>
                 </tr>
               </table>
-              <br />
+
  
-            <br />
+            
             <table id="Tbotones">
                 <tr>
                     <td ><asp:LinkButton ID="LkBtn1" runat="server" PostBackUrl="http://www.csac.cl" TabIndex="13" OnClick="LinkButton1_Click">Volver Página Principal</asp:LinkButton></td>

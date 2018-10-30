@@ -10,87 +10,87 @@
 namespace Sisca {
     
     
-    public partial class InicioSesion {
+    public partial class Pagina {
         
         /// <summary>
-        /// Control form1.
+        /// Control head.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
-        /// Control Panel1.
+        /// Control form2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
         
         /// <summary>
-        /// Control Lb5.
+        /// Control menuBotones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lb5;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuBotones;
         
         /// <summary>
-        /// Control TxtUsuario.
+        /// Control LinkBtnPerfil.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtUsuario;
+        protected global::System.Web.UI.WebControls.LinkButton LinkBtnPerfil;
         
         /// <summary>
-        /// Control LbContraseña.
+        /// Control LinkBtnAlmuerzos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbContraseña;
+        protected global::System.Web.UI.WebControls.LinkButton LinkBtnAlmuerzos;
         
         /// <summary>
-        /// Control Lb6.
+        /// Control LinkBtnRegistro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lb6;
+        protected global::System.Web.UI.WebControls.LinkButton LinkBtnRegistro;
         
         /// <summary>
-        /// Control TxtPass.
+        /// Control LinkBtnCFG.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPass;
+        protected global::System.Web.UI.WebControls.LinkButton LinkBtnCFG;
         
         /// <summary>
-        /// Control LkBtn1.
+        /// Control cuerpo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LkBtn1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cuerpo;
         
         /// <summary>
-        /// Control BtnIngresar.
+        /// Control PrincipalPag.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnIngresar;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder PrincipalPag;
     }
 }

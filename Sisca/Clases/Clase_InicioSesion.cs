@@ -20,13 +20,13 @@ namespace Sisca.Clases
         Clase_Conexion conexion = new Clase_Conexion();
 
         //metodo para vereficar usuario en la BD
-        public int vereficar_usuario(String rutemp, String user, String password)
+        public int vereficar_usuario( String RutDV, String password)
         {
             int retorno = 0;
             try
             {
-                String sql = "SELECT EmpRut, CodUser , Pass FROM usuarios_acceso WHERE empRut='" + rutemp + "' AND CodUser='" + user + "' AND Pass='" + password + "' ";
-                //transformar datos a una tabla
+                String sql = "SELECT Rutdv as rut , Pass FROM vtusuarios_acceso WHERE Rutdv='" + RutDV + "' AND Pass = AES_ENCRYPT( '" + password + "', '" + RutDV + "');";
+                //transformar datos a una tabla 
                 DataTable tablaLog = new DataTable();
                 conexion.conectar();
                 //ejecutar consulta sql
@@ -56,7 +56,7 @@ namespace Sisca.Clases
             DataTable tabla = new DataTable();
             try
             {
-                String sql = "SELECT EmpRut.rut AS Rut , NomEmpr AS Nombre FROM Usuarios_acceso WHERE CodUser='" + user + "'";
+                String sql = "SELECT Rut , Nombre AS Nombre FROM Usuarios_acceso WHERE CodUser='" + user + "'";
                 conexion.conectar();
                 MySqlDataAdapter datos = new MySqlDataAdapter(sql, conexion.con);
                 conexion.cerrar();

@@ -302,6 +302,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="MAlmuerzos\Menu_Almuerzos.aspx" />
+    <Content Include="MConfiguracion\Menu_Configuracion.aspx" />
+    <Content Include="MInterfaz\Menu_Principal.aspx" />
+    <Content Include="MPerfil\Menu_Perfil.aspx" />
+    <Content Include="MRegistros\Menu_Registros.aspx" />
+    <Content Include="Pagina.Master" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -320,12 +326,55 @@
     <Compile Include="Clases\Clase_InicioSesion.cs" />
     <Compile Include="Clases\Clase_Conexion.cs" />
     <Compile Include="Clases\Clase_Permisos.cs" />
+    <Compile Include="Clases\Clase_Varios.cs" />
     <Compile Include="InicioSesion.aspx.cs">
       <DependentUpon>InicioSesion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InicioSesion.aspx.designer.cs">
       <DependentUpon>InicioSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MAlmuerzos\Menu_Almuerzos.aspx.cs">
+      <DependentUpon>Menu_Almuerzos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MAlmuerzos\Menu_Almuerzos.aspx.designer.cs">
+      <DependentUpon>Menu_Almuerzos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MConfiguracion\Menu_Configuracion.aspx.cs">
+      <DependentUpon>Menu_Configuracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MConfiguracion\Menu_Configuracion.aspx.designer.cs">
+      <DependentUpon>Menu_Configuracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MInterfaz\Menu_Principal.aspx.cs">
+      <DependentUpon>Menu_Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MInterfaz\Menu_Principal.aspx.designer.cs">
+      <DependentUpon>Menu_Principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPerfil\Menu_Perfil.aspx.cs">
+      <DependentUpon>Menu_Perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MPerfil\Menu_Perfil.aspx.designer.cs">
+      <DependentUpon>Menu_Perfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MRegistros\Menu_Registros.aspx.cs">
+      <DependentUpon>Menu_Registros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MRegistros\Menu_Registros.aspx.designer.cs">
+      <DependentUpon>Menu_Registros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina.Master.cs">
+      <DependentUpon>Pagina.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina.Master.designer.cs">
+      <DependentUpon>Pagina.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Default.aspx.cs">

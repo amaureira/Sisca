@@ -7,90 +7,63 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Sisca {
+namespace Sisca.MConfiguracion {
     
     
-    public partial class InicioSesion {
+    public partial class Menu_Configuracion {
         
         /// <summary>
-        /// Control form1.
+        /// Control LblTMenu.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label LblTMenu;
         
         /// <summary>
-        /// Control Panel1.
+        /// Control Btn01.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.WebControls.Button Btn01;
         
         /// <summary>
-        /// Control Lb5.
+        /// Control Btn02.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lb5;
+        protected global::System.Web.UI.WebControls.Button Btn02;
         
         /// <summary>
-        /// Control TxtUsuario.
+        /// Control Btn03.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtUsuario;
+        protected global::System.Web.UI.WebControls.Button Btn03;
         
         /// <summary>
-        /// Control LbContraseña.
+        /// Control Btn04.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbContraseña;
+        protected global::System.Web.UI.WebControls.Button Btn04;
         
         /// <summary>
-        /// Control Lb6.
+        /// Control Btn05.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lb6;
-        
-        /// <summary>
-        /// Control TxtPass.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPass;
-        
-        /// <summary>
-        /// Control LkBtn1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LkBtn1;
-        
-        /// <summary>
-        /// Control BtnIngresar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnIngresar;
+        protected global::System.Web.UI.WebControls.Button Btn05;
     }
 }
