@@ -4,9 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
-
-
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data;
@@ -51,7 +48,7 @@ namespace Sisca
             }
             else
             {
-                TxtUsuario.Text = varios.formatearRut(TxtUsuario.Text);
+                TxtUsuario.Text = varios.formatearRutcP(TxtUsuario.Text);
                 TxtPass.Enabled = true; TxtPass.Focus();
             }
         }
