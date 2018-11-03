@@ -70,5 +70,35 @@ namespace Sisca.Clases
             }
         }
 
+        //metodo para extraer nombre  usuario en la BD
+        public string NombreUsuario(String rut_login)
+        {
+
+            DataTable tabla = new DataTable();
+
+            string vb = null;
+            try
+            {
+                String sql = "SELECT Nombres FROM vtusuarios WHERE rutDV='" + rut_login + "' ";
+                conexion.conectar();
+                MySqlDataAdapter datos = new MySqlDataAdapter(sql, conexion.con);
+                conexion.cerrar();
+                datos.Fill(tabla);
+
+                if (tabla.Rows.Count > 0)
+                {
+                    foreach (DataRow fila in tabla.Rows)
+                    {
+                        vb = fila[0].ToString();
+                    }
+                }
+            }
+            catch (Exception error)
+            {
+                //MessageBox.Show(error.ToString());
+            }
+            return vb;
+        }
+
     }
 }

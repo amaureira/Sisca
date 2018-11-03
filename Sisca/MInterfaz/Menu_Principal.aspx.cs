@@ -11,7 +11,10 @@ namespace Sisca.MInterfaz
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["valor"] == null)
+            {
+                Response.Redirect("~/InicioSesion.aspx", false);
+            }
         }
     }
 }

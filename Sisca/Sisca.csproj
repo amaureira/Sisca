@@ -301,14 +301,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\Tema1\estilos.css" />
+    <Content Include="MPerfil\MenuPerfil.master" />
     <None Include="packages.config" />
     <Content Include="MAlmuerzos\Menu_Almuerzos.aspx" />
     <Content Include="MConfiguracion\Menu_Configuracion.aspx" />
     <Content Include="MInterfaz\Menu_Principal.aspx" />
-    <Content Include="MPerfil\Menu_Perfil.aspx" />
     <Content Include="MRegistros\Menu_Registros.aspx" />
     <Content Include="Pagina.Master" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <Content Include="Scripts\jquery-2.2.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -319,6 +321,12 @@
   <ItemGroup>
     <Content Include="Imagenes\Logo_CSAC.jpg" />
     <Content Include="InicioSesion.aspx" />
+    <Content Include="Scripts\ai.0.15.0-build58334.js" />
+    <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
+    <None Include="Scripts\jquery-2.2.0.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.0.js" />
+    <Content Include="Scripts\jquery-2.2.0.min.js" />
+    <Content Include="Scripts\jquery.numeric.js" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
   </ItemGroup>
@@ -355,12 +363,12 @@
     <Compile Include="MInterfaz\Menu_Principal.aspx.designer.cs">
       <DependentUpon>Menu_Principal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MPerfil\Menu_Perfil.aspx.cs">
-      <DependentUpon>Menu_Perfil.aspx</DependentUpon>
+    <Compile Include="MPerfil\MenuPerfil.master.cs">
+      <DependentUpon>MenuPerfil.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MPerfil\Menu_Perfil.aspx.designer.cs">
-      <DependentUpon>Menu_Perfil.aspx</DependentUpon>
+    <Compile Include="MPerfil\MenuPerfil.master.designer.cs">
+      <DependentUpon>MenuPerfil.master</DependentUpon>
     </Compile>
     <Compile Include="MRegistros\Menu_Registros.aspx.cs">
       <DependentUpon>Menu_Registros.aspx</DependentUpon>

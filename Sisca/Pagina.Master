@@ -5,45 +5,138 @@
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Colegio San Agustin Concepción</title>
+    <title>SISCA - CSAC</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link href="Imagenes/Logo_CSAC.jpg" rel="icon" type="image/x-icon"/>
-    <style type="text/css">
+    <link href="App_Themes/Tema1/estilo.css" rel="stylesheet" type="text/css" />
+    
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
 
-    body {
-        background: #ffffff;
-        margin: 20px;
-        font-family: 'Open Sans', sans-serif;
-        color: rgba(113,113,113,1.00);
-    }
+    <script type="text/javascript" src="../Scripts/jquery.js"></script>
+    <script type="text/javascript" src="jquery.numeric.js"></script>
 
-    #contenedor{
-        margin:0 auto;
-        max-height:inherit;
-        background:#ffffff;
+    <script type="text/javascript">
+
+        if (history.forward(1))
+            location.replace(history.forward(1))
+
+        function Moneda(input)
+        {
+            var num = input.value.replace(/\./g, '');
+            if (!isNaN(num)) {
+                num = num.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g,'$1.');
+                num = num.split('').reverse().join('').replace(/^[\.]/, '');
+                input.value = num;
+            } 
+           else {
+                input.value = input.value.replace(/[^\d\.]*/g, '');
+            }
         }
 
+        function IsNumeric(valor) {
+            var log = valor.length; var sw = "S";
+            for (x = 0; x < log; x++) {
+                v1 = valor.substr(x, 1);
+                v2 = parseInt(v1);
+                //Compruebo si es un valor numérico
+                if (isNaN(v2)) { sw = "N"; }
+            }
+            if (sw == "S") { return true; } else { return false; }
+        }
+        var primerslap = false;
+        var segundoslap = false;
+
+        function formateafecha(fecha) {
+            var long = fecha.length;
+            var dia;
+            var mes;
+            var ano;
+            if ((long >= 2) && (primerslap == false)) {
+                dia = fecha.substr(0, 2);
+                if ((IsNumeric(dia) == true) && (dia <= 31) && (dia != "00")) {
+                    fecha = fecha.substr(0, 2) + "/" + fecha.substr(3, 7); primerslap = true;
+                }
+                else {
+                    fecha = ""; primerslap = false;
+                }
+            }
+            else {
+                dia = fecha.substr(0, 1);
+                if (IsNumeric(dia) == false) {
+                    fecha = "";
+                }
+                if ((long <= 2) && (primerslap = true)) {
+                    fecha = fecha.substr(0, 1); primerslap = false;
+                }
+            }
+            if ((long >= 5) && (segundoslap == false)) {
+                mes = fecha.substr(3, 2);
+                if ((IsNumeric(mes) == true) && (mes <= 12) && (mes != "00")) {
+                    fecha = fecha.substr(0, 5) + "/" + fecha.substr(6, 4); segundoslap = true;
+                }
+                else {
+                    fecha = fecha.substr(0, 3);; segundoslap = false;
+                }
+            }
+            else {
+                if ((long <= 5) && (segundoslap = true)) {
+                    fecha = fecha.substr(0, 4); segundoslap = false;
+                }
+            }
+            if (long >= 7) {
+                ano = fecha.substr(6, 4);
+                if (IsNumeric(ano) == false) {
+                    fecha = fecha.substr(0, 6);
+                }
+                else {
+                    if (long == 10) {
+                        if ((ano == 0) || (ano < 1900) || (ano > 2100)) {
+                            fecha = fecha.substr(0, 6);
+                        }
+                    }
+                }
+            }
+            if (long >= 10) {
+                fecha = fecha.substr(0, 10);
+                dia = fecha.substr(0, 2);
+                mes = fecha.substr(3, 2);
+                ano = fecha.substr(6, 4);
+                // Año no viciesto y es febrero y el dia es mayor a 28
+                if ((ano % 4 != 0) && (mes == 02) && (dia > 28)) {
+                    fecha = fecha.substr(0, 2) + "/";
+                }
+            }
+            return (fecha);
+        }
+
+        function ValidNum()
+        {
+            if (event.keyCode < 48 || event.keyCode > 57) {
+                event.returnValue = false;
+            }
+        }
+
+        $(document).ready(function () {
+            $('#entero').numeric();
+            $('#decimal').numeric(",");
+        });
+
+    </script>
+    <style type="text/css">
+
     /*----- CABECERA ----------*/
-    .fijo {
-        position:fixed
-        !important;
-        top:2px;
-        z-index:50
-        !important;
-    }
 
     #titulo {
         background-color: #F0F8F8;
-        border-bottom: 3px solid #FFF;
         margin: 0;
         width: 100%;
         float: none;
-        border-radius: 0px;
-        padding: 5px;
+        /* padding: 5px; */
         text-align: center;
-        left: -2px;
-        height: 52px;
+        /*left: 0px;*/
+        height: 100px;
     }
 
     #titulo2 {
@@ -54,6 +147,7 @@
         margin-right: auto;
         margin-top: 0px;
         margin-bottom: 0px;*/
+        
         width:25%;
         height:auto;
         float:left;
@@ -67,13 +161,31 @@
         height: 55px;
     }
 
+    #logotipoCSAC {
+        width: 40%;
+        float: left;
+        text-align: left;
+        margin-top: 5px;
+        height: 50px;
+        margin-top: 0px;
+    }
+
+        .logoCSAC {
+            width: 100px;
+            height: 55px;
+            margin-top: 1px;
+        }
+
     #cerrarSesion{
         width:118px;
         float:right;
         margin:0px auto 0px 0px;
         padding:5px;
-        right:16px;
-        height: 19px;
+        position: fixed;
+        top: 3px;
+        z-index: 50;
+        right: 16px;
+        height: 24px;
     }
 
     .icon_cerrar{
@@ -89,22 +201,22 @@
         background: url(cerrar_on.png) left no-repeat;
     }
 
-    #PeriodoMes{
-        height:8px;
-        width:73px;
-        float:right;
-        margin-top: 69px;
-        margin:0px 0px 0px 0px;
-        padding:30px;
-        right:94px;
-        height: 19px;
-        }
+    .dato_usuario{
+        padding-left:17px;
+        color:rgba(143,27,29,1.00);
+        text-decoration:none;
+        font-size: 10px;
+    }
+
+    .dato_usuario:hover{
+        color:rgba(29,94,92,1.00);
+    }
 
     /*----- MENÚ PRINCIPAL ----------*/
 
     #menuBotones {
         background: #FFF;
-        height: 31px;
+        height: 30px;
         width: 100%;
         margin-top: 65px;
         left: 0px;
@@ -114,9 +226,9 @@
     #menuBotones ul{
         list-style:none;
         /*width:100%;
-        height:19px;*/
+        height:19px;        display:inline-flex;*/
         margin-left:0px;
-        display:inline-flex;
+
         background-color:rgba(69, 171, 163, 0.6);
         padding-top:22px;
         padding-left: 0;
@@ -126,6 +238,10 @@
         margin-top: 0;
         margin-bottom: 0;
     }
+            .auto-style11 {
+            height: 20px;
+            margin-top: 83px;
+        }
 
     #menuBotones li{
     margin-left: 2px;
@@ -151,9 +267,9 @@
     }
 
     #menuBotones li a:active{
-    text-decoration: none;
-    color: green;
-    background-color: #ff9c62;
+        text-decoration: none;
+        color: green;
+        background-color: #ff9c62;
     }
 
     #menuBotones li ul li a {
@@ -171,9 +287,34 @@
 
     /*----- CUERPO ----------*/
     #cuerpo {
-        background:#ffffff;
-        margin-left: -2px;
-    }
+    margin-top: 0px;
+    background: #ffffff;
+    /*margin-left: 0px;*/
+    display: inline-flex;
+    width: 100%;
+}
+
+    #menu {
+        /*margin-top: 0px;
+        margin-left: 0px;*/
+        width: 210px;
+        height: 500px;
+        text-align: center;
+        overflow-x: auto;
+        overflow-y: auto;
+}
+
+    #AreaPrincipal {
+        margin-top: -110px;
+        margin-left: 220px;
+        background: white;
+        width: 100%;
+        height: 100%;
+        margin: 0 7px 7px 0;
+        float: right;
+        overflow-x: auto;
+        overflow-y: auto;
+}
 
     #piepagina {
         width: 100%;
@@ -183,58 +324,92 @@
         left: 0;
     }
 
-    #principal{
-        background:#ffffff;
-    }
+            
+        .auto-style7 {
+            position: fixed;
+            top: 2px;
+            z-index: 50;
+            left: 0px;
+        }
+        .auto-style8 {
+            position: fixed;
+            top: 7px;
+            z-index: 50;
+            right: 148px;
+            height: 39px;
+            width: 206px;
+        }
+        .auto-style9 {
+            width: 124px;
+            margin-left: 0px;
+            text-align: left;
+        }
+        
+        .auto-style10 {
+            width: 204px;
+            margin-left: 0px;
+        }
+        
 
-        .auto-style1 {
-            width: 100px;
-            height: 55px;
-            margin-top: 1px;
-        }
-        .auto-style2 {
-            width: 19%;
-        }
+
+        
 
     </style>
 
-    <meta http-equiv="Expires" content="0" />
-    <meta http-equiv="Pragma" content="no-cache" />
-
-    <script type="text/javascript">
-        if (history.forward(1))
-            location.replace(history.forward(1))
-    </script>
-
 </head>
-<body>
-    <div>
-        <!-------- CABECERA ----->
-        <form id="form2" runat="server" style="margin-left: 40px; margin-top: 0px; height:auto">
-        <header>
-            <div id="titulo" class="fijo">
-                <div id="titulo2" class="auto-style2" >
-                    <img src="/Imagenes/Logo_CSAC.jpg" runat="server" class="auto-style1"/>
+<body >
+    <form id="form1" runat="server">
+        <div>
+            <!-------- CABECERA ----->
+            <div id="titulo" >
+                <div id="logotipoCSAC" >
+                    <img src="/Imagenes/Logo_CSAC.jpg" runat="server" class="logoCSAC"/>
+                </div>
+                <div id="datosusuario" class="auto-style8">
+                    <table class="auto-style10" >
+                        <tr>
+                            <td class="auto-style9" >
+                                <asp:Label ID="LblRut" runat="server" Text="Rut" CssClass="dato_usuario"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style9" >
+                                <asp:Label ID="LblNombre" runat="server" Text="Nombre" CssClass="dato_usuario"></asp:Label>
+                            </td>
+                        </tr>
+                     </table>
+                </div>
+
+                <div id="cerrarSesion" >
+                    <a href="/InicioSesion.aspx" class="icon_cerrar">Cerrar Sesión</a>
+                </div>
+                <div id="menuBotones"  runat="server" class="auto-style7">
+                    <ul>
+                        <li><asp:LinkButton ID="LinkBtnPerfil" runat="server" OnClick="LinkBtnPerfil_Click" Enabled="False">Mi Perfil</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="LinkBtnAlmuerzos" runat="server" OnClick="LinkBtnAlmuerzos_Click" Enabled="False">Almuerzos</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="LinkBtnRegistro" runat="server" OnClick="LinkBtnRegistro_Click" Enabled="False">Registros</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="LinkBtnCFG" runat="server" OnClick="LinkBtnCFG_Click" Enabled="True">Configuración</asp:LinkButton></li>
+                    </ul>
                 </div>
             </div>
-            <div id="cerrarSesion" class="fijo">
-                <a href="/InicioSesion.aspx" class="icon_cerrar">Cerrar Sesión</a>
-            </div>
-        </header>
-            <div id="menuBotones" class="fijo" runat="server">
-                <ul>
-                    <li><asp:LinkButton ID="LinkBtnPerfil" runat="server" OnClick="LinkBtnPerfil_Click" Enabled="False">Mi Perfil</asp:LinkButton></li>
-                    <li><asp:LinkButton ID="LinkBtnAlmuerzos" runat="server" OnClick="LinkBtnAlmuerzos_Click" Enabled="False">Almuerzos</asp:LinkButton></li>
-                    <li><asp:LinkButton ID="LinkBtnRegistro" runat="server" OnClick="LinkBtnRegistro_Click" Enabled="False">Registros</asp:LinkButton></li>
-                    <li><asp:LinkButton ID="LinkBtnCFG" runat="server" OnClick="LinkBtnCFG_Click" Enabled="True">Configuración</asp:LinkButton></li>
-                </ul>
-            </div>
-            <div id="cuerpo" runat="server">
-                <div id="principal" style=" margin-top: 80px; width: 854px; margin-left: -32px; height: 0px;" >
-                    <asp:ContentPlaceHolder ID="PrincipalPag" runat="server"></asp:ContentPlaceHolder>
+
+            <div  id="cuerpo" runat="server" >
+                <div  id="menu" runat="server" class="mlateral">
+                    <asp:ContentPlaceHolder ID="MenuLateral" runat="server">
+
+
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="AreaPrincipal"  runat="server" >
+                    <asp:ContentPlaceHolder ID="PrincipalPag" runat="server">
+
+                    </asp:ContentPlaceHolder>
                 </div>
             </div>
-        </form>
+
     </div>
+
+        </form>
+   
 </body>
 </html>

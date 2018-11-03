@@ -20,7 +20,6 @@ namespace Sisca.Clases
             try
             {
                 String sql = "SELECT per_usuario, per_boton FROM permisos_web WHERE rut_login='" + rut_login + "' AND per_usuario='" + usuario + "' AND per_boton='" + nboton + "' ";
-
                 //transformar datos a una tabla
                 DataTable tabla = new DataTable();
                 conexion.conectar();
@@ -39,12 +38,9 @@ namespace Sisca.Clases
             {
                 //Console.Write("Error" + e.ToString());
             }
-
-
-
             return retorno;
         }
-
+ 
 
         public void Agregar_Boton(String rut_login, String usuario, String nboton)
         {
@@ -61,7 +57,6 @@ namespace Sisca.Clases
                 //MessageBox.Show(error.ToString());
             }
         }
-
 
         public DataTable Consultar_Permiso_Boton(String rut_login, String usuario, String nboton)
         {
@@ -81,7 +76,6 @@ namespace Sisca.Clases
             }
             return tabla;
         }
-
 
         public DataTable Listado_Permisos_Botones_Usuarios(String rut_login, String usuario)
         {
@@ -111,7 +105,6 @@ namespace Sisca.Clases
             }
             return tabla;
         }
-
 
         public void Actualizar_Permiso_Boton(String rut_login, String usuario, String nboton, String vb)
         {

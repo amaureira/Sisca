@@ -29,9 +29,10 @@ namespace Sisca
             Session.Add("ssPassAdmin", "A122");
             if (!Page.IsPostBack)
             {
-                TxtUsuario.Text = (string)(Session["ssusuario"]);
+                TxtUsuario.Text = (string)(Session["ssRutUsuario"]);
                 TxtUsuario.Focus();
-                Session.Remove("valor");
+                Session.Remove("ssRutUsuario");
+                Session.Remove("ssNombreUsuario");
             }
         }
 
@@ -70,7 +71,7 @@ namespace Sisca
                 else
                 {
                     //Verificar si existe o no el usuario en la BD al loguearse  --- DownListRut1.SelectedValue.ToString()
-                    int valor = inicioSesion.vereficar_usuario( TxtUsuario.Text, TxtPass.Text);
+                    int valor = inicioSesion.vereficar_usuario(varios.formatearRutsP(TxtUsuario.Text), TxtPass.Text);
                     Session.Add("valor", valor);
                     if (TxtUsuario.Text == (string)(Session["ssAdmin"]) && TxtPass.Text == (string)(Session["ssPassAdmin"]))
                     {
@@ -87,8 +88,9 @@ namespace Sisca
                     }
                     else
                     {
-                        Session.Add("ssusuario", TxtUsuario.Text);
-                        Response.Redirect("~/MInterfaz/Menu_Principal.aspx");
+                        Session.Add("ssRutUsuario", TxtUsuario.Text);
+                        Session.Add("ssNombreUsuario", varios.NombreUsuario(varios.formatearRutsP(TxtUsuario.Text)));
+                        Response.Redirect("~/MInterfaz/Menu_Principal.aspx", false);
                     }
                 }
             }

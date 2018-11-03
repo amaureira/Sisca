@@ -1,0 +1,155 @@
+﻿body {
+    background: #ffffff;
+    margin: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(113,113,113,1.00);
+}
+
+#contenedor {
+    margin: 0 auto;
+    max-height: inherit;
+    background: #ffffff;
+    }
+
+/*----- CABECERA ----------*/
+.fijo {
+    position: fixed !important;
+    top: 2px;
+    z-index: 50 !important;
+}
+
+
+.icon_cerrar {
+    background: url(cerrar.png) left no-repeat;
+    padding-left: 17px;
+    color: rgba(143,27,29,1.00);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+    .icon_cerrar:hover {
+        text-decoration: underline;
+        color: rgba(29,94,92,1.00);
+        background: url(cerrar_on.png) left no-repeat;
+    }
+
+.dato_usuario {
+    padding-left: 17px;
+    color: rgba(143,27,29,1.00);
+    text-decoration: none;
+    font-size: 10px;
+}
+
+    .dato_usuario:hover {
+        color: rgba(29,94,92,1.00);
+    }
+
+/*----- MENÚ PRINCIPAL ----------*/
+
+
+/*----- CUERPO ----------*/
+
+.mlateral{
+    /*margin-top: 0px;
+    margin-left: 0px;*/
+    width: 210px;
+    height: 500px;
+    text-align: center;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+
+
+#AreaTrabajo{
+    background: #ffffff;
+    border: 1px solid #eee9e9;
+    margin-right: -500px;
+    margin-left: 220px;
+    /*width: 933px;*/
+    width: 100%;
+    margin-top: 50px;
+    height: 376px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+
+#datagrid {
+    width: -100px;
+    margin-left: 220px;
+    /*margin-top: 0px;*/
+    height: 216px;
+}
+
+#botones {
+    width: 700px;
+    margin-left: 5px;
+}
+
+#encabezadogrid {
+    width: 1200px;
+    height: 100px;
+    margin-left: 5px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+#detallegrid {
+    width: 1200px;
+    height: 300px;
+    margin-left: 5px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+#detallegridOC {
+    width: 1100px;
+    height: 450px;
+    margin-left: 5px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+#piegridOC {
+    width: 1100px;
+    height: 300px;
+    margin-left: 5px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+#piegrid {
+    width: 1200px;
+    height: 300px;
+    margin-left: 5px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+td {
+    font-size: 14pt;
+    text-align: Center;
+}
+
+#TxtTbj {
+    font-size: 14pt;
+}
+
+.Izq {
+    text-align: left;
+}
+
+.Cto {
+    text-align: Center;
+}
+
+
+.Drc {
+    text-align: right;
+}
+
+
+.Updatebutton {
+    background-image: url(../images/actualizar.gif);
+}
