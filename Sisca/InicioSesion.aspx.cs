@@ -32,6 +32,7 @@ namespace Sisca
                 TxtUsuario.Text = (string)(Session["ssRutUsuario"]);
                 TxtUsuario.Focus();
                 Session.Remove("ssRutUsuario");
+                Session.Remove("ssRutUsuariosp");
                 Session.Remove("ssNombreUsuario");
             }
         }
@@ -88,7 +89,8 @@ namespace Sisca
                     }
                     else
                     {
-                        Session.Add("ssRutUsuario", TxtUsuario.Text);
+                        Session.Add("ssRutUsuariocp", TxtUsuario.Text);
+                        Session.Add("ssRutUsuariosp", varios.formatearRutsP(TxtUsuario.Text));
                         Session.Add("ssNombreUsuario", varios.NombreUsuario(varios.formatearRutsP(TxtUsuario.Text)));
                         Response.Redirect("~/MInterfaz/Menu_Principal.aspx", false);
                     }

@@ -13,7 +13,8 @@ namespace Sisca
         public MySqlConnection con;
         public void conectar()
         {
-            con = new MySqlConnection("server=190.54.104.172;user id=sisca;password=Csac2018;database=sisca;port=3306");
+            //con = new MySqlConnection("server=190.54.104.172;user id=sisca;password=Csac2018;database=sisca;port=3306");
+            con = new MySqlConnection("server=localhost;user id=sisca;password=Csac2018;database=sisca;port=3306");
             con.Open();
         }
         //metodo para cerrar

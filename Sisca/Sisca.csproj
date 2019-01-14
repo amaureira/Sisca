@@ -302,10 +302,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Tema1\estilos.css" />
+    <Content Include="MConfiguracion\Menu_Configuracion.aspx" />
     <Content Include="MPerfil\MenuPerfil.master" />
+    <Content Include="MConfiguracion\MenuConfiguracion.master" />
     <None Include="packages.config" />
     <Content Include="MAlmuerzos\Menu_Almuerzos.aspx" />
-    <Content Include="MConfiguracion\Menu_Configuracion.aspx" />
     <Content Include="MInterfaz\Menu_Principal.aspx" />
     <Content Include="MRegistros\Menu_Registros.aspx" />
     <Content Include="Pagina.Master" />
@@ -348,6 +349,13 @@
     </Compile>
     <Compile Include="MAlmuerzos\Menu_Almuerzos.aspx.designer.cs">
       <DependentUpon>Menu_Almuerzos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MConfiguracion\MenuConfiguracion.master.cs">
+      <DependentUpon>MenuConfiguracion.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MConfiguracion\MenuConfiguracion.master.designer.cs">
+      <DependentUpon>MenuConfiguracion.master</DependentUpon>
     </Compile>
     <Compile Include="MConfiguracion\Menu_Configuracion.aspx.cs">
       <DependentUpon>Menu_Configuracion.aspx</DependentUpon>

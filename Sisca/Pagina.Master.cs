@@ -14,19 +14,18 @@ namespace Sisca
     public partial class Pagina : System.Web.UI.MasterPage
     {
         //Instanciar clases
-        Clase_InicioSesion inicioSesion = new Clase_InicioSesion();
+        // Clase_InicioSesion inicioSesion = new Clase_InicioSesion();
         Clase_Conexion conexion = new Clase_Conexion();
+        Clase_Permisos permisos = new Clase_Permisos();
         Clase_Varios varios = new Clase_Varios();
         //Variables publicas
-        public string rutusuario, nombreusuario;
+        public string rutusuariocp, rutusuariosp, nombreusuario;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            rutusuario= (string)(Session["ssRutUsuario"]);
-            LblRut.Text = rutusuario;
-
-            nombreusuario = (string)(Session["ssNombreUsuario"]);
-            LblNombre.Text = nombreusuario;
+            rutusuariosp= (string)(Session["ssRutUsuariosp"]);
+            LblRut.Text = (string)(Session["ssRutUsuariocp"]);
+            LblNombre.Text = (string)(Session["ssNombreUsuario"]);
             //LblRut.Text = (string)(Session["ssRutUsuario"]);
             //LblNombre.Text = (string)(Session["ssNombreUsuario"]);
         }
@@ -48,7 +47,14 @@ namespace Sisca
 
         protected void LinkBtnCFG_Click(object sender, EventArgs e)
         {
-
+            // string valor = permisos.Permiso_Boton(rutusuariosp, LinkBtnCFG.Text);
+            if (!string.IsNullOrEmpty(permisos.Permiso_Boton(rutusuariosp, LinkBtnCFG.Text)))
+            {
+                //ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", valor, false);
+                return;
+            }
+            else
+            { Response.Redirect("~/MConfiguracion/Menu_Configuracion.aspx", false); }
         }
 
 

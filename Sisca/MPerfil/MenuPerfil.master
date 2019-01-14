@@ -1,7 +1,7 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Pagina.Master" AutoEventWireup="true" CodeBehind="MenuPerfil.master.cs" Inherits="Sisca.MPerfil.MenuPerfil" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="MenuLateral" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MenuLateral" runat="server">
     <h4 ><asp:Label ID="Label1" runat="server" Font-Size="13pt" Font-Bold="False" Font-Names="Arial" >Mi Perfil</asp:Label></h4>
         <asp:Button ID="Btn01" runat="server" Text="Vale de Colación"   Height="31px" Width="160px" BackColor="#EBEBEB" Font-Size="11pt" OnClick="Btn01_Click" Font-Names="Arial Narrow" BorderStyle="Groove" BorderColor="White" Visible="True" Enabled="False"/>
         <asp:Button ID="Btn02" runat="server" Text="Reserva de Platos"  Height="32px" Width="160px" BackColor="#EBEBEB" Font-Size="11pt" OnClick="Btn02_Click" Font-Names="Arial Narrow" BorderStyle="Groove" BorderColor="White" Visible="True" Enabled="False"/>
@@ -9,7 +9,7 @@
         <asp:Button ID="Btn04" runat="server" Text="Otro datos"         Height="32px" Width="160px" BackColor="#EBEBEB" Font-Size="11pt" OnClick="Btn04_Click" Font-Names="Arial Narrow" BorderStyle="Groove" BorderColor="White" Visible="False" Enabled="false"/>
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="PrincipalPag" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="PrincipalPag" runat="server">
     <asp:ContentPlaceHolder ID="PrincipalPag" runat="server">
     </asp:ContentPlaceHolder>
 </asp:Content>
