@@ -4,11 +4,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MenuLateral" runat="server">
     <h4 ><asp:Label ID="Label1" runat="server" Font-Size="13pt" Font-Bold="False" Font-Names="Arial" >Configuración</asp:Label></h4>
-        <asp:Button ID="Btn01" runat="server" Text="Creación de usuarios" Height="31px" Width="160px" BackColor="#EBEBEB" Font-Size="11pt" OnClick="Btn01_Click" Font-Names="Arial Narrow" BorderStyle="Groove" BorderColor="White" Visible="True" Enabled="False"/>
-        <asp:Button ID="Btn02" runat="server" Text="Permisos"   Height="32px" Width="160px" BackColor="#EBEBEB" Font-Size="11pt" OnClick="Btn02_Click" Font-Names="Arial Narrow" BorderStyle="Groove" BorderColor="White" Visible="True" Enabled="False"/>
-        <asp:Button ID="Btn03" runat="server" Text="Feriados"   Height="32px" Width="160px" BackColor="#EBEBEB" Font-Size="11pt" OnClick="Btn03_Click" Font-Names="Arial Narrow" BorderStyle="Groove" BorderColor="White" Visible="True" Enabled="False"/>
+        <asp:Button ID="Btn01" runat="server" Text="Usuarios" Height="31px" Width="160px" BackColor="#EBEBEB" Font-Size="11pt" OnClick="Btn01_Click" Font-Names="Arial Narrow" BorderStyle="Groove" BorderColor="White" Visible="True" Enabled="True"/>
+        <asp:Button ID="Btn02" runat="server" Text="Permisos" Height="32px" Width="160px" BackColor="#EBEBEB" Font-Size="11pt" OnClick="Btn02_Click" Font-Names="Arial Narrow" BorderStyle="Groove" BorderColor="White" Visible="True" Enabled="False"/>
+        <asp:Button ID="Btn03" runat="server" Text="Feriados" Height="32px" Width="160px" BackColor="#EBEBEB" Font-Size="11pt" OnClick="Btn03_Click" Font-Names="Arial Narrow" BorderStyle="Groove" BorderColor="White" Visible="True" Enabled="False"/>
         <asp:Button ID="Btn04" runat="server" Text="Parametros" Height="32px" Width="160px" BackColor="#EBEBEB" Font-Size="11pt" OnClick="Btn04_Click" Font-Names="Arial Narrow" BorderStyle="Groove" BorderColor="White" Visible="True" Enabled="False"/>
-        <asp:Button ID="Btn05" runat="server" Text="Otro datos" Height="32px" Width="160px" BackColor="#EBEBEB" Font-Size="11pt" OnClick="Btn05_Click" Font-Names="Arial Narrow" BorderStyle="Groove" BorderColor="White" Visible="False" Enabled="false"/>
+        <asp:Button ID="Btn05" runat="server" Text="Otros Datos" Height="32px" Width="160px" BackColor="#EBEBEB" Font-Size="11pt" OnClick="Btn05_Click" Font-Names="Arial Narrow" BorderStyle="Groove" BorderColor="White" Visible="False" Enabled="false"/>
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="PrincipalPag" runat="server">

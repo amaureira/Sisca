@@ -44,10 +44,10 @@ namespace Sisca.Clases
             string vb, script="";
             bool Admin = false;
             Admin = ValidaAdmin(rut_login);
-            int valor = Vereficar_Boton_Usuario(rut_login, nboton);
+            int valor = Vereficar_Boton_Usuario(rut_login, nboton, Admin);
             if (valor == 0)
             {
-                Agregar_Boton(rut_login, nboton);
+                //Agregar_Boton(rut_login, nboton);
                 if (Admin)
                 {
                     Actualizar_Permiso_Boton(rut_login, nboton, "1");
@@ -59,7 +59,9 @@ namespace Sisca.Clases
             }
             else
             {
-                vb = Consultar_Permiso_Boton(rut_login, nboton);
+                if (Admin)
+                { Actualizar_Permiso_Boton(rut_login, nboton, "1"); }
+                vb = Consultar_Permiso_Boton(rut_login, nboton, Admin);
                 if (string.IsNullOrEmpty(vb))
                     { script = @"<script type='text/javascript'> alert('\Estimado usuario,\n no tiene acceso al boton " + nboton + ",\\n favor contactarse con el administrador para su habilitacion...!!\');</script>"; }
                 else
@@ -69,18 +71,18 @@ namespace Sisca.Clases
         }
 
         //metodo para vereficar usuario en la BD
-        public int Vereficar_Boton_Usuario(String rut_login,  String nboton)
+        public int Vereficar_Boton_Usuario(String rut_login,  String nboton, Boolean Admin)
         {
             int retorno = 0;
-            bool Admin = false;
+            //bool Admin = false;
             try
             {
-                Admin = ValidaAdmin(rut_login);
+                //Admin = ValidaAdmin(rut_login);
                 String sql;
                 if (Admin)
-                    { sql = "SELECT rutdv, per_boton from tbpermisos"; }
+                { sql = "SELECT rutdv, per_boton from tbpermisos"; }
                 else
-                    { sql = "SELECT rutdv, per_boton FROM permisos_web WHERE rutdv='" + rut_login + "' AND per_boton='" + nboton + "' "; }
+                { sql = "SELECT rutdv, per_boton FROM permisos_web WHERE rutdv='" + rut_login + "' AND per_boton='" + nboton + "' "; }
                 //transformar datos a una tabla
                 DataTable tabla = new DataTable();
                 conexion.conectar();
@@ -92,6 +94,8 @@ namespace Sisca.Clases
                 //contar cantidad de filas de la tabla
                 int contador = tabla.Rows.Count;
                 //preguntar por la cantidad de filas
+                if (contador == 0)
+                    { Agregar_Boton(rut_login, nboton); }
                 if (contador > 0 || Admin)
                     { retorno = 1; }
             }
@@ -106,7 +110,7 @@ namespace Sisca.Clases
         {
             try
             {
-                String sql = "INSERT permisos_web SET rutdv='" + rut_login + "',per_boton='" + nboton + "',per_vb=0";
+                String sql = "INSERT tbpermisos SET rutdv='" + rut_login + "',per_boton='" + nboton + "',per_vb=0";
                 conexion.conectar();
                 MySqlCommand datos = new MySqlCommand(sql, conexion.con);
                 datos.ExecuteScalar();
@@ -118,19 +122,19 @@ namespace Sisca.Clases
             }
         }
 
-        public String Consultar_Permiso_Boton(String rut_login, String nboton)
+        public String Consultar_Permiso_Boton(String rut_login, String nboton, Boolean Admin)
         {
             DataTable tabla = new DataTable();
-            bool Admin = false;
+            //bool Admin = false;
             string vb = null;
             String sql;
             try
             {
-                Admin = ValidaAdmin(rut_login);
+                //  Admin = ValidaAdmin(rut_login);
                 if (Admin)
-                    { sql = "SELECT per_vb from permisos_web"; }
+                    { sql = "SELECT per_boton FROM vtpermisos_usuarios"; }
                 else
-                    { sql = "SELECT per_vb FROM permisos_web " + "WHERE rutdv='" + rut_login + "' AND per_boton='" + nboton + "'"; }
+                    { sql = "SELECT per_boton FROM vtpermisos_usuarios " + "WHERE RutDV='" + rut_login + "' AND per_boton='" + nboton + "'"; }
 
                 conexion.conectar();
                 MySqlDataAdapter datos = new MySqlDataAdapter(sql, conexion.con);
@@ -139,9 +143,7 @@ namespace Sisca.Clases
                 if (tabla.Rows.Count > 0)
                 {
                     foreach (DataRow fila in tabla.Rows)
-                    {
-                        vb = fila[0].ToString();
-                    }
+                    { vb = fila[0].ToString(); }
                 }
             }
             catch (Exception error)
@@ -160,9 +162,9 @@ namespace Sisca.Clases
             {
                 Admin = ValidaAdmin(rut_login);
                 if (Admin)
-                    { sql = "SELECT rutdv, per_boton, per_vb FROM permisos_web WHERE rutdv='" + rut_login + "'  ORDER BY 1 ASC"; }
+                    { sql = "SELECT rutdv, per_boton, per_vb FROM vtpermisos_usuarios WHERE rutdv='" + rut_login + "'  ORDER BY 1 ASC"; }
                 else
-                    { sql = "SELECT rutdv, per_boton, per_vb FROM permisos_web WHERE rutdv='" + rut_login + "' ORDER BY 2 ASC"; }
+                    { sql = "SELECT rutdv, per_boton, per_vb FROM vtpermisos_usuarios WHERE rutdv='" + rut_login + "'  ORDER BY 2 ASC"; }
                 conexion.conectar();
                 MySqlDataAdapter datos = new MySqlDataAdapter(sql, conexion.con);
                 conexion.cerrar();
@@ -179,7 +181,7 @@ namespace Sisca.Clases
         {
             try
             {
-                String sql = "UPDATE tbpermios SET per_vb=" + vb + "  WHERE rutdv='" + rut_login + "' AND per_boton='" + nboton + "'";
+                String sql = "UPDATE tbpermisos SET per_vb=" + vb + "  WHERE rutdv='" + rut_login + "' AND per_boton='" + nboton + "'";
                 conexion.conectar();
                 MySqlCommand datos = new MySqlCommand(sql, conexion.con);
                 datos.ExecuteScalar();

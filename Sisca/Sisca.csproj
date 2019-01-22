@@ -302,6 +302,172 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Tema1\estilos.css" />
+    <Content Include="Imagenes\Iconos\1downarrow.ico" />
+    <Content Include="Imagenes\Iconos\1leftarrow.ico" />
+    <Content Include="Imagenes\Iconos\1rightarrow.ico" />
+    <Content Include="Imagenes\Iconos\1uparrow.ico" />
+    <Content Include="Imagenes\Iconos\2downarrow.ico" />
+    <Content Include="Imagenes\Iconos\2leftarrow.ico" />
+    <Content Include="Imagenes\Iconos\2rightarrow.ico" />
+    <Content Include="Imagenes\Iconos\2uparrow.ico" />
+    <Content Include="Imagenes\Iconos\5days.ico" />
+    <Content Include="Imagenes\Iconos\7days.ico" />
+    <Content Include="Imagenes\Iconos\about_kde.ico" />
+    <Content Include="Imagenes\Iconos\alarmd.ico" />
+    <Content Include="Imagenes\Iconos\appearance.ico" />
+    <Content Include="Imagenes\Iconos\apply.ico" />
+    <Content Include="Imagenes\Iconos\appointment.ico" />
+    <Content Include="Imagenes\Iconos\attach.ico" />
+    <Content Include="Imagenes\Iconos\back.ico" />
+    <Content Include="Imagenes\Iconos\bookmark.ico" />
+    <Content Include="Imagenes\Iconos\bookmark_add.ico" />
+    <Content Include="Imagenes\Iconos\bookmark_folder.ico" />
+    <Content Include="Imagenes\Iconos\bookmark_toolbar.ico" />
+    <Content Include="Imagenes\Iconos\build.ico" />
+    <Content Include="Imagenes\Iconos\button_cancel.ico" />
+    <Content Include="Imagenes\Iconos\button_ok.ico" />
+    <Content Include="Imagenes\Iconos\camera.ico" />
+    <Content Include="Imagenes\Iconos\camera_test.ico" />
+    <Content Include="Imagenes\Iconos\cancel.ico" />
+    <Content Include="Imagenes\Iconos\colorize.ico" />
+    <Content Include="Imagenes\Iconos\configure.ico" />
+    <Content Include="Imagenes\Iconos\configure_shortcuts.ico" />
+    <Content Include="Imagenes\Iconos\configure_toolbars.ico" />
+    <Content Include="Imagenes\Iconos\connect_creating.ico" />
+    <Content Include="Imagenes\Iconos\connect_established.ico" />
+    <Content Include="Imagenes\Iconos\connect_no.ico" />
+    <Content Include="Imagenes\Iconos\contents.ico" />
+    <Content Include="Imagenes\Iconos\contexthelp.ico" />
+    <Content Include="Imagenes\Iconos\decrypted.ico" />
+    <Content Include="Imagenes\Iconos\down.ico" />
+    <Content Include="Imagenes\Iconos\edit.ico" />
+    <Content Include="Imagenes\Iconos\editcopy.ico" />
+    <Content Include="Imagenes\Iconos\editcut.ico" />
+    <Content Include="Imagenes\Iconos\editdelete.ico" />
+    <Content Include="Imagenes\Iconos\editpaste.ico" />
+    <Content Include="Imagenes\Iconos\editshred.ico" />
+    <Content Include="Imagenes\Iconos\edittrash.ico" />
+    <Content Include="Imagenes\Iconos\encrypted.ico" />
+    <Content Include="Imagenes\Iconos\exec.ico" />
+    <Content Include="Imagenes\Iconos\exit.ico" />
+    <Content Include="Imagenes\Iconos\fileclose.ico" />
+    <Content Include="Imagenes\Iconos\filefind.ico" />
+    <Content Include="Imagenes\Iconos\filenew.ico" />
+    <Content Include="Imagenes\Iconos\fileopen.ico" />
+    <Content Include="Imagenes\Iconos\fileprint.ico" />
+    <Content Include="Imagenes\Iconos\filequickprint.ico" />
+    <Content Include="Imagenes\Iconos\filesave.ico" />
+    <Content Include="Imagenes\Iconos\filesaveas.ico" />
+    <Content Include="Imagenes\Iconos\find.ico" />
+    <Content Include="Imagenes\Iconos\flag.ico" />
+    <Content Include="Imagenes\Iconos\folder_new.ico" />
+    <Content Include="Imagenes\Iconos\fonts.ico" />
+    <Content Include="Imagenes\Iconos\forward.ico" />
+    <Content Include="Imagenes\Iconos\foward.ico" />
+    <Content Include="Imagenes\Iconos\frameprint.ico" />
+    <Content Include="Imagenes\Iconos\gohome.ico" />
+    <Content Include="Imagenes\Iconos\goto.ico" />
+    <Content Include="Imagenes\Iconos\help.ico" />
+    <Content Include="Imagenes\Iconos\history.ico" />
+    <Content Include="Imagenes\Iconos\history_clear.ico" />
+    <Content Include="Imagenes\Iconos\idea.ico" />
+    <Content Include="Imagenes\Iconos\info.ico" />
+    <Content Include="Imagenes\Iconos\kcontrol.ico" />
+    <Content Include="Imagenes\Iconos\kde1.ico" />
+    <Content Include="Imagenes\Iconos\kde2.ico" />
+    <Content Include="Imagenes\Iconos\kde3.ico" />
+    <Content Include="Imagenes\Iconos\kde4.ico" />
+    <Content Include="Imagenes\Iconos\kde5.ico" />
+    <Content Include="Imagenes\Iconos\kde6.ico" />
+    <Content Include="Imagenes\Iconos\key_enter.ico" />
+    <Content Include="Imagenes\Iconos\kjots.ico" />
+    <Content Include="Imagenes\Iconos\klipper_dock.ico" />
+    <Content Include="Imagenes\Iconos\ksysguard.ico" />
+    <Content Include="Imagenes\Iconos\launch.ico" />
+    <Content Include="Imagenes\Iconos\list.ico" />
+    <Content Include="Imagenes\Iconos\locationbar_erase.ico" />
+    <Content Include="Imagenes\Iconos\lock.ico" />
+    <Content Include="Imagenes\Iconos\mail_delete.ico" />
+    <Content Include="Imagenes\Iconos\mail_find.ico" />
+    <Content Include="Imagenes\Iconos\mail_forward.ico" />
+    <Content Include="Imagenes\Iconos\mail_generic.ico" />
+    <Content Include="Imagenes\Iconos\mail_get.ico" />
+    <Content Include="Imagenes\Iconos\mail_new.ico" />
+    <Content Include="Imagenes\Iconos\mail_replay.ico" />
+    <Content Include="Imagenes\Iconos\mail_replayall.ico" />
+    <Content Include="Imagenes\Iconos\mail_reply.ico" />
+    <Content Include="Imagenes\Iconos\mail_replyall.ico" />
+    <Content Include="Imagenes\Iconos\mail_send.ico" />
+    <Content Include="Imagenes\Iconos\make_kdevelop.ico" />
+    <Content Include="Imagenes\Iconos\misc.ico" />
+    <Content Include="Imagenes\Iconos\month.ico" />
+    <Content Include="Imagenes\Iconos\network.ico" />
+    <Content Include="Imagenes\Iconos\newtodo.ico" />
+    <Content Include="Imagenes\Iconos\no.ico" />
+    <Content Include="Imagenes\Iconos\ok.ico" />
+    <Content Include="Imagenes\Iconos\openterm.ico" />
+    <Content Include="Imagenes\Iconos\player_eject.ico" />
+    <Content Include="Imagenes\Iconos\player_end.ico" />
+    <Content Include="Imagenes\Iconos\player_fwd.ico" />
+    <Content Include="Imagenes\Iconos\player_pause.ico" />
+    <Content Include="Imagenes\Iconos\player_play.ico" />
+    <Content Include="Imagenes\Iconos\player_rew.ico" />
+    <Content Include="Imagenes\Iconos\player_start.ico" />
+    <Content Include="Imagenes\Iconos\player_stop.ico" />
+    <Content Include="Imagenes\Iconos\project_open.ico" />
+    <Content Include="Imagenes\Iconos\queue.ico" />
+    <Content Include="Imagenes\Iconos\rebuild.ico" />
+    <Content Include="Imagenes\Iconos\redo.ico" />
+    <Content Include="Imagenes\Iconos\reload.ico" />
+    <Content Include="Imagenes\Iconos\reload3.ico" />
+    <Content Include="Imagenes\Iconos\reload_page.ico" />
+    <Content Include="Imagenes\Iconos\remove.ico" />
+    <Content Include="Imagenes\Iconos\run.ico" />
+    <Content Include="Imagenes\Iconos\search.ico" />
+    <Content Include="Imagenes\Iconos\showmenu.ico" />
+    <Content Include="Imagenes\Iconos\signature.ico" />
+    <Content Include="Imagenes\Iconos\spellcheck.ico" />
+    <Content Include="Imagenes\Iconos\stop.ico" />
+    <Content Include="Imagenes\Iconos\tab_breakoff.ico" />
+    <Content Include="Imagenes\Iconos\tab_duplicate.ico" />
+    <Content Include="Imagenes\Iconos\tab_new.ico" />
+    <Content Include="Imagenes\Iconos\tab_new_bg.ico" />
+    <Content Include="Imagenes\Iconos\tab_new_raised.ico" />
+    <Content Include="Imagenes\Iconos\tab_remove.ico" />
+    <Content Include="Imagenes\Iconos\terminal.ico" />
+    <Content Include="Imagenes\Iconos\text_document.ico" />
+    <Content Include="Imagenes\Iconos\thumbnail.ico" />
+    <Content Include="Imagenes\Iconos\today.ico" />
+    <Content Include="Imagenes\Iconos\todo.ico" />
+    <Content Include="Imagenes\Iconos\toggle_log.ico" />
+    <Content Include="Imagenes\Iconos\tux.ico" />
+    <Content Include="Imagenes\Iconos\undo.ico" />
+    <Content Include="Imagenes\Iconos\unlock.ico" />
+    <Content Include="Imagenes\Iconos\up.ico" />
+    <Content Include="Imagenes\Iconos\up2.ico" />
+    <Content Include="Imagenes\Iconos\viewmag+.ico" />
+    <Content Include="Imagenes\Iconos\viewmag-.ico" />
+    <Content Include="Imagenes\Iconos\viewmag.ico" />
+    <Content Include="Imagenes\Iconos\viewmag1.ico" />
+    <Content Include="Imagenes\Iconos\viewmagfit.ico" />
+    <Content Include="Imagenes\Iconos\view_bottom.ico" />
+    <Content Include="Imagenes\Iconos\view_choose.ico" />
+    <Content Include="Imagenes\Iconos\view_detailed.ico" />
+    <Content Include="Imagenes\Iconos\view_icon.ico" />
+    <Content Include="Imagenes\Iconos\view_left_right.ico" />
+    <Content Include="Imagenes\Iconos\view_multicolumn.ico" />
+    <Content Include="Imagenes\Iconos\view_remove.ico" />
+    <Content Include="Imagenes\Iconos\view_right.ico" />
+    <Content Include="Imagenes\Iconos\view_sidetree.ico" />
+    <Content Include="Imagenes\Iconos\view_text.ico" />
+    <Content Include="Imagenes\Iconos\view_top_bottom.ico" />
+    <Content Include="Imagenes\Iconos\view_tree.ico" />
+    <Content Include="Imagenes\Iconos\whatsnext.ico" />
+    <Content Include="Imagenes\Iconos\window_fullscreen.ico" />
+    <Content Include="Imagenes\Iconos\window_new.ico" />
+    <Content Include="Imagenes\Iconos\window_nofullscreen.ico" />
+    <Content Include="Imagenes\Iconos\wizard.ico" />
+    <Content Include="MConfiguracion\Usuario.aspx" />
     <Content Include="MConfiguracion\Menu_Configuracion.aspx" />
     <Content Include="MPerfil\MenuPerfil.master" />
     <Content Include="MConfiguracion\MenuConfiguracion.master" />
@@ -349,6 +515,13 @@
     </Compile>
     <Compile Include="MAlmuerzos\Menu_Almuerzos.aspx.designer.cs">
       <DependentUpon>Menu_Almuerzos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MConfiguracion\Usuario.aspx.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MConfiguracion\Usuario.aspx.designer.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="MConfiguracion\MenuConfiguracion.master.cs">
       <DependentUpon>MenuConfiguracion.master</DependentUpon>
@@ -401,7 +574,11 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Imagenes\gif\" />
+    <Folder Include="Imagenes\MsOffice\" />
+    <Folder Include="Imagenes\PDF\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
