@@ -28,12 +28,11 @@ namespace Sisca.MConfiguracion
 
             if (!Page.IsPostBack)
             {
-                string mesn = (string)(Session["ssmes"]);
-                string periodon = (string)(Session["ssperiodo"]);
+                rutusuariosp = (string)(Session["ssRutUsuariosp"]);
                 //DropDownListaMes.SelectedValue = mesn;
                 // DropDownListaPeriodo.SelectedValue = periodon;
-                String rutpro = obtieneultRut(rut_login);
-                cargaProveedor(rutpro);
+                //String rutpro = obtieneultRut(rut_login);
+                //cargaProveedor(rutpro);
             }
 
         }

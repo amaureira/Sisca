@@ -184,15 +184,6 @@ namespace Sisca.MConfiguracion {
         protected global::System.Web.UI.WebControls.TextBox TBDirecion;
         
         /// <summary>
-        /// Control DDListRegion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDListRegion;
-        
-        /// <summary>
         /// Control TBComuna.
         /// </summary>
         /// <remarks>
@@ -211,15 +202,6 @@ namespace Sisca.MConfiguracion {
         protected global::System.Web.UI.WebControls.TextBox TBCiudad;
         
         /// <summary>
-        /// Control TBGiro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBGiro;
-        
-        /// <summary>
         /// Control TBTelefono.
         /// </summary>
         /// <remarks>
@@ -227,15 +209,6 @@ namespace Sisca.MConfiguracion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TBTelefono;
-        
-        /// <summary>
-        /// Control TBFax.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBFax;
         
         /// <summary>
         /// Control TBEMail.
@@ -247,31 +220,13 @@ namespace Sisca.MConfiguracion {
         protected global::System.Web.UI.WebControls.TextBox TBEMail;
         
         /// <summary>
-        /// Control TBContacto.
+        /// Control TBObs.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBContacto;
-        
-        /// <summary>
-        /// Control RBtListTipo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RBtListTipo;
-        
-        /// <summary>
-        /// Control CheckBoxOC.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxOC;
+        protected global::System.Web.UI.WebControls.TextBox TBObs;
         
         /// <summary>
         /// Control BtnGuardar.

@@ -55,15 +55,6 @@
                                         <td><asp:TextBox ID="TBDirecion" runat="server" Width="525px" Enabled="False"></asp:TextBox></td>
                                     </tr>
                                 </table>
-
-                                <table>
-                                    <tr>
-                                        <td class="Izq" style="width:110px">Region</td>
-                                        <td class="Cto">:</td>
-                                        <td style="width: 230px"><asp:DropDownList ID="DDListRegion" runat="server" style=" width: 230px " Enabled="False"></asp:DropDownList></td>
-                                    </tr>
-                                </table>
-
                                 <table>
                                     <tr>
                                         <td class="Izq" style="width: 110px">Comuna</td>
@@ -77,20 +68,12 @@
                                     </tr>
 
                                 </table>
+
                                 <table>
                                     <tr>
-                                        <td class="Izq" style="width: 110px">Giro</td>
-                                        <td class="Cto">:</td>
-                                        <td><asp:TextBox ID="TBGiro" runat="server" Width="525px" Height="49px" TextMode="MultiLine" Enabled="False"></asp:TextBox></td>
-                                    </tr>
-                                </table>
-                                <table>
-                                    <tr>
-                                        <td class="Izq" style="width: 110px">Telefonos</td>
+                                        <td class="Izq" style="width: 110px">Telefono</td>
                                         <td class="Cto">:</td>
                                         <td><asp:TextBox ID="TBTelefono" runat="server"  Width="100px" Enabled="False"></asp:TextBox></td>
-                                        <td class="Izq" style="width: 110px">Fax</td>
-                                        <td><asp:TextBox ID="TBFax" runat="server"  Width="100px" Enabled="False"></asp:TextBox></td>
                                     </tr>
                                 </table>
                               <table>
@@ -99,28 +82,12 @@
                                         <td class="Cto">:</td>
                                         <td><asp:TextBox ID="TBEMail" runat="server" Width="525px" style="margin-left: 0px" Enabled="False"></asp:TextBox></td>
                                     </tr>
-                                    <tr>
-                                        <td class="Izq"  style="width: 110px">Contacto</td>
-                                        <td class="Cto">:</td>
-                                        <td><asp:TextBox ID="TBContacto" runat="server" Width="525px" style="margin-left: 0px" Enabled="False"></asp:TextBox></td>
-                                    </tr>
-                                </table>
-                                <table>
-                                     <tr>
-                                        <td class="Izq"  style="width: 110px">Tipo</td>
-                                        <td ><asp:RadioButtonList ID="RBtListTipo" runat="server"  RepeatDirection="Horizontal" OnSelectedIndexChanged="RBtListTipo_SelectedIndexChanged" Enabled="False">
-                                            <asp:ListItem Value="1">Suministros</asp:ListItem>
-                                            <asp:ListItem Value="2">Servicios</asp:ListItem>
-                                        </asp:RadioButtonList></td>
-                                    </tr>
                                 </table>
                                 <table>
                                     <tr>
-                                        <td class="Izq"  style="width: 110px">Requiere Orden de Compra</td>
+                                        <td class="Izq" style="width: 110px">Observaciones</td>
                                         <td class="Cto">:</td>
-                                        <td>
-                                            <asp:CheckBox ID="CheckBoxOC" runat="server" Enabled="False" />
-                                        </td>
+                                        <td><asp:TextBox ID="TBObs" runat="server" Width="525px" Height="49px" TextMode="MultiLine" Enabled="False" OnTextChanged="TBObs_TextChanged"></asp:TextBox></td>
                                     </tr>
                                 </table>
                                 <table>
