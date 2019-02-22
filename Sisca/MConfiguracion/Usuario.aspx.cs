@@ -54,7 +54,8 @@ namespace Sisca.MConfiguracion
 
         protected void IBtnEdicion_Click(object sender, ImageClickEventArgs e)
         {
-
+            cambiaestadoTB(true);
+            cambiaestadoBoton(false, true);
         }
 
         protected void IBtnNuevo_Click(object sender, ImageClickEventArgs e)
@@ -67,15 +68,6 @@ namespace Sisca.MConfiguracion
 
         }
 
-        protected void IBtnImpresion_Click(object sender, ImageClickEventArgs e)
-        {
-
-        }
-
-        protected void IBtnExcel_Click(object sender, ImageClickEventArgs e)
-        {
-
-        }
 
         protected void IBtnGrabar_Click(object sender, ImageClickEventArgs e)
         {
@@ -134,6 +126,32 @@ namespace Sisca.MConfiguracion
         {
 
         }
+
+
+        protected void cambiaestadoTB(Boolean estado)
+        {
+            TBNombre.Enabled = estado;
+            TBApePater.Enabled = estado;
+            TBApeMater.Enabled = estado;
+            DDListCargo.Enabled = estado;
+            TBEMail.Enabled = estado;
+            TBObs.Enabled = estado;
+        }
+
+        protected void cambiaestadoBoton(Boolean estado, Boolean estado2)
+        {
+            IBtnEdicion.Enabled = estado;
+            IBtnNuevo.Enabled = estado;
+            IBtnElimina.Enabled = estado2;
+            IBtnBuscar.Enabled = estado;
+            IBtnGrabar.Enabled = estado2;
+            IBtnSinGrabar.Enabled = estado2;
+            IBtnPrimero.Enabled = estado;
+            IBtnAnterior.Enabled = estado;
+            IBtnsiguiente.Enabled = estado;
+            IBtnUltimo.Enabled = estado;
+        }
+
 
         protected void cargaUsuario(string rut)
         {

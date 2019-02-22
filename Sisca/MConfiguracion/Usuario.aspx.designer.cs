@@ -94,24 +94,6 @@ namespace Sisca.MConfiguracion {
         protected global::System.Web.UI.WebControls.ImageButton IBtnBuscar;
         
         /// <summary>
-        /// Control IBtnImpresion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton IBtnImpresion;
-        
-        /// <summary>
-        /// Control IBtnExcel.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton IBtnExcel;
-        
-        /// <summary>
         /// Control IBtnGrabar.
         /// </summary>
         /// <remarks>

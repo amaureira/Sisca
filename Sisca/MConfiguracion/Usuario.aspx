@@ -27,8 +27,8 @@
                                         <td><asp:ImageButton ID="IBtnNuevo"     runat="server" ImageUrl="~/Imagenes/Iconos/filenew.ico"     AlternateText="Nuevo" OnClick="IBtnNuevo_Click"  /></td>
                                         <td><asp:ImageButton ID="IBtnElimina"   runat="server" ImageUrl="~/Imagenes/Iconos/editdelete.ico"  AlternateText="Elimina" Enabled="False" style="height: 16px" /></td>
                                         <td><asp:ImageButton ID="IBtnBuscar"    runat="server" ImageUrl="~/Imagenes/Iconos/search.ico"      AlternateText="Buscar" OnClick="IBtnBuscar_Click" /></td>
-                                        <td><asp:ImageButton ID="IBtnImpresion" runat="server" ImageUrl="~/Imagenes/Iconos/fileprint.ico"   AlternateText="Impresión" OnClick="IBtnImpresion_Click" /></td>
-                                        <td><asp:ImageButton ID="IBtnExcel"     runat="server" ImageUrl="~/Imagenes/MsOffice/01 Excel.ico"  AlternateText="Exportar a Excel" Height="22px" Width="23px" OnClick="IBtnExcel_Click" /></td>
+                                        <td></td>
+                                        <td></td>
                                         <td><asp:ImageButton ID="IBtnGrabar"    runat="server" ImageUrl="~/Imagenes/Iconos/filesave.ico"    AlternateText="Grabar" Enabled="False" OnClick="IBtnGrabar_Click" /></td>
                                         <td><asp:ImageButton ID="IBtnSinGrabar" runat="server" ImageUrl="~/Imagenes/Iconos/undo.ico"        AlternateText="No Graba" Enabled="False" OnClick="IBtnSinGrabar_Click" /></td>
                                         <td></td>
