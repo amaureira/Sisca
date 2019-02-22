@@ -175,40 +175,31 @@ namespace Sisca.MConfiguracion {
         protected global::System.Web.UI.WebControls.TextBox TBNombre;
         
         /// <summary>
-        /// Control TBDirecion.
+        /// Control TBApePater.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBDirecion;
+        protected global::System.Web.UI.WebControls.TextBox TBApePater;
         
         /// <summary>
-        /// Control TBComuna.
+        /// Control TBApeMater.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBComuna;
+        protected global::System.Web.UI.WebControls.TextBox TBApeMater;
         
         /// <summary>
-        /// Control TBCiudad.
+        /// Control DDListCargo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBCiudad;
-        
-        /// <summary>
-        /// Control TBTelefono.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBTelefono;
+        protected global::System.Web.UI.WebControls.DropDownList DDListCargo;
         
         /// <summary>
         /// Control TBEMail.

@@ -28,18 +28,28 @@ namespace Sisca.MConfiguracion
             { Response.Redirect("~/InicioSesion.aspx"); }
 
             rutusuariosp = (string)(Session["ssRutUsuariosp"]);
-
+            cargaddlist();
             if (!Page.IsPostBack)
             {
                 string mesn = (string)(Session["ssmes"]);
                 string periodon = (string)(Session["ssperiodo"]);
-                //DropDownListaMes.SelectedValue = mesn;
+                // DropDownListaMes.SelectedValue = mesn;
                 // DropDownListaPeriodo.SelectedValue = periodon;
-                String rutpro = obtieneultRut(rut_login);
-                //cargaProveedor(rutpro);
+                String rutUsuario = obtieneultRut();
+                cargaUsuario(rutUsuario);
 
 
             }
+        }
+
+        protected void cargaddlist()
+        {
+            DDListCargo.DataSource = cargaCargos();
+            DDListCargo.DataTextField = "DesProf";
+            DDListCargo.DataValueField = "CodProf";
+            DDListCargo.DataBind();
+            DDListCargo.Items.Insert(0, new ListItem("Seleccione Cargo...", "0"));
+            return;
         }
 
         protected void IBtnEdicion_Click(object sender, ImageClickEventArgs e)
@@ -79,22 +89,34 @@ namespace Sisca.MConfiguracion
 
         protected void IBtnPrimero_Click(object sender, ImageClickEventArgs e)
         {
-
+            String rut = obtienePriRut();
+            cargaUsuario(rut);
         }
 
         protected void IBtnAnterior_Click(object sender, ImageClickEventArgs e)
         {
-
+            if (TBRut.Text != obtienePriRut())
+            {
+                String rut = obtieneAntRut(TBRut.Text);
+                cargaUsuario(rut);
+            }
         }
 
         protected void IBtnsiguiente_Click(object sender, ImageClickEventArgs e)
         {
-
+            {
+                if (TBRut.Text != obtieneultRut())
+                {
+                    String rut = obtieneSigRut(TBRut.Text);
+                    cargaUsuario(rut);
+                }
+            }
         }
 
         protected void IBtnUltimo_Click(object sender, ImageClickEventArgs e)
         {
-
+            String rut = obtieneultRut();
+            cargaUsuario(rut);
         }
 
         protected void TBObs_TextChanged(object sender, EventArgs e)
@@ -118,18 +140,79 @@ namespace Sisca.MConfiguracion
             TBRut.Text = rut;
             TBDVRut.Text = obtienevalor("dv", rut);
             TBNombre.Text = obtienevalor("nombre", rut);
-            TBDirecion.Text = obtienevalor("direccion", rut);
-            DDListRegion.SelectedValue = obtienevalor("region", rut);
-            TBComuna.Text = obtienevalor("comuna", rut);
-            TBCiudad.Text = obtienevalor("ciudad", rut);
-            TBGiro.Text = obtienevalor("giro", rut);
-            TBTelefono.Text = obtienevalor("telefonos", rut);
-            TBFax.Text = obtienevalor("fax", rut);
-            TBEMail.Text = obtienevalor("email", rut);
-            TBContacto.Text = obtienevalor("contacto", rut);
-            RBtListTipo.SelectedValue = obtienevalor("tipocompra", rut);
-
+            TBApePater.Text = obtienevalor("apellidopaterno", rut);
+            TBApeMater.Text = obtienevalor("apellidomaterno", rut);
+            DDListCargo.SelectedValue = obtienevalor("CodProf", rut);
+            TBEMail.Text = obtienevalor("correo", rut);
             return;
+        }
+
+        protected string obtienePriRut()
+        {
+            string vb = "";
+            DataTable tabla = new DataTable();
+            String sql = "SELECT Rut FROM tbusuarios ORDER BY rut ASC LIMIT 1;";
+            conexion.conectar();
+            MySqlDataAdapter datos = new MySqlDataAdapter(sql, conexion.con);
+            conexion.cerrar();
+            datos.Fill(tabla);
+            if (tabla.Rows.Count > 0)
+            {
+                foreach (DataRow fila in tabla.Rows)
+                { vb = fila[0].ToString(); }
+            }
+            return vb;
+        }
+
+        protected string obtieneSigRut(string rut)
+        {
+            string vb = "";
+            DataTable tabla = new DataTable();
+            String sql = "SELECT Rut FROM tbusuarios WHERE rut>" + rut + " ORDER BY rut ASC LIMIT 1;";
+            conexion.conectar();
+            MySqlDataAdapter datos = new MySqlDataAdapter(sql, conexion.con);
+            conexion.cerrar();
+            datos.Fill(tabla);
+            if (tabla.Rows.Count > 0)
+            {
+                foreach (DataRow fila in tabla.Rows)
+                { vb = fila[0].ToString(); }
+            }
+            return vb;
+        }
+
+        protected string obtieneAntRut(string rut)
+        {
+            string vb = "";
+            DataTable tabla = new DataTable();
+            String sql = "SELECT Rut FROM tbusuarios WHERE rut<" + rut + " ORDER BY rut DESC LIMIT 1;";
+            conexion.conectar();
+            MySqlDataAdapter datos = new MySqlDataAdapter(sql, conexion.con);
+            conexion.cerrar();
+            datos.Fill(tabla);
+            if (tabla.Rows.Count > 0)
+            {
+                foreach (DataRow fila in tabla.Rows)
+                { vb = fila[0].ToString(); }
+            }
+            return vb;
+        }
+
+        protected string obtieneultRut()
+        {
+            string vb = "";
+            DataTable tabla = new DataTable();
+            String sql = "SELECT Rut FROM tbusuarios ORDER BY rut DESC LIMIT 1;";
+            conexion.conectar();
+            MySqlDataAdapter datos = new MySqlDataAdapter(sql, conexion.con);
+            conexion.cerrar();
+            datos.Fill(tabla);
+            if (tabla.Rows.Count > 0)
+            {
+                foreach (DataRow fila in tabla.Rows)
+                { vb = fila[0].ToString(); }
+            }
+            return vb;
         }
 
         protected string obtienevalor(string campo, String Rut)
@@ -147,6 +230,18 @@ namespace Sisca.MConfiguracion
                 { vb = fila[0].ToString(); }
             }
             return vb;
+        }
+
+        protected DataTable cargaCargos()
+        {
+            string vb = "";
+            DataTable tabla = new DataTable();
+            String sql = "SELECT CodProf, DesProf FROM tbprofesion ";
+            conexion.conectar();
+            MySqlDataAdapter datos = new MySqlDataAdapter(sql, conexion.con);
+            conexion.cerrar();
+            datos.Fill(tabla);
+            return tabla;
         }
 
     }

@@ -45,49 +45,35 @@
 
                                 <table style="width: 661px; height: 56px">
                                     <tr>
-                                        <td class="Izq"  style="width: 110px">Nombre</td>
+                                        <td class="Izq"  style="width: 350px">Nombre</td>
                                         <td class="Cto">:</td>
-                                        <td><asp:TextBox ID="TBNombre" runat="server" Width="525px" style="margin-left: 0px" Enabled="False"></asp:TextBox></td>
+                                        <td colspan="4" style="width: 214px"><asp:TextBox ID="TBNombre" runat="server" Width="525px" style="margin-left: 0px" Enabled="False"></asp:TextBox></td>
                                     </tr>
                                     <tr>
-                                        <td class="Izq" style="width: 110px">Dirección</td>
+                                        <td class="Izq"  style="width: 350px">Apellido Paterno</td>
                                         <td class="Cto">:</td>
-                                        <td><asp:TextBox ID="TBDirecion" runat="server" Width="525px" Enabled="False"></asp:TextBox></td>
+                                        <td style="width: 214px"><asp:TextBox ID="TBApePater" runat="server" Width="200px" style="margin-left: 0px" Enabled="False"></asp:TextBox></td>
+                                        <td class="Izq"  style="width: 350px">Apellido Materno</td>
+                                        <td class="Cto">:</td>
+                                        <td><asp:TextBox ID="TBApeMater" runat="server" Width="200px" style="margin-left: 0px" Enabled="False"></asp:TextBox></td>
                                     </tr>
-                                </table>
-                                <table>
                                     <tr>
-                                        <td class="Izq" style="width: 110px">Comuna</td>
+                                        <td  class="Izq"  style="width: 350px">Cargo</td>
                                         <td class="Cto">:</td>
-                                        <td><asp:TextBox ID="TBComuna" runat="server" Width="100px" Enabled="False"></asp:TextBox></td>
-                                        <td></td>
-                                        <td class="Izq" style="width: 90px">Ciudad</td>
-                                        <td class="Cto">:</td>
-                                        <td><asp:TextBox ID="TBCiudad" runat="server" Width="110px" Enabled="False"></asp:TextBox></td>
-                                        <td></td>
+                                        <td colspan="4" style="width: 214px"><asp:DropDownList ID="DDListCargo" runat="server" Enabled="False" style=" width: 230px "></asp:DropDownList>
+                                        </td>
                                     </tr>
-
-                                </table>
-
-                                <table>
                                     <tr>
-                                        <td class="Izq" style="width: 110px">Telefono</td>
+                                        <td class="Izq"  style="width: 350px">EMail</td>
                                         <td class="Cto">:</td>
-                                        <td><asp:TextBox ID="TBTelefono" runat="server"  Width="100px" Enabled="False"></asp:TextBox></td>
-                                    </tr>
-                                </table>
-                              <table>
-                                    <tr>
-                                        <td class="Izq"  style="width: 110px">EMail</td>
-                                        <td class="Cto">:</td>
-                                        <td><asp:TextBox ID="TBEMail" runat="server" Width="525px" style="margin-left: 0px" Enabled="False"></asp:TextBox></td>
+                                        <td colspan="4" style="width: 214px"><asp:TextBox ID="TBEMail" runat="server" Width="525px" style="margin-left: 0px" Enabled="False"></asp:TextBox></td>
                                     </tr>
                                 </table>
                                 <table>
                                     <tr>
                                         <td class="Izq" style="width: 110px">Observaciones</td>
                                         <td class="Cto">:</td>
-                                        <td><asp:TextBox ID="TBObs" runat="server" Width="525px" Height="49px" TextMode="MultiLine" Enabled="False" OnTextChanged="TBObs_TextChanged"></asp:TextBox></td>
+                                        <td><asp:TextBox ID="TBObs" runat="server" Width="527px" Height="49px" TextMode="MultiLine" Enabled="False" OnTextChanged="TBObs_TextChanged"></asp:TextBox></td>
                                     </tr>
                                 </table>
                                 <table>
